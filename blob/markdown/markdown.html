@@ -1,0 +1,382 @@
+<h1 id="markdown-syntax"><strong>Markdown Syntax</strong></h1>
+
+<blockquote>
+    <p>Markdown에 대하여 기본적인 내용 위주로 정리를 하였다. <br>
+        여러 변형판이 존재하며(따라서 tool에 따라서 같은 markdown이 조금씩은 다르게 표시 되기도 한다.</p>
+</blockquote>
+
+<h2 id="contents-of-table"><strong>contents of table</strong></h2>
+
+<p><div class="toc">
+    <ul>
+        <li><a href="#markdown-syntax">Markdown Syntax</a><ul>
+            <li><a href="#contents-of-table">contents of table</a></li>
+            <li><a href="#markdown-transform">Markdown Transform</a></li>
+            <li><a href="#block-elements-1">Block Elements</a><ul>
+                <li><a href="#headers">Headers</a></li>
+                <li><a href="#emphasis">Emphasis</a></li>
+                <li><a href="#list">List</a></li>
+                <li><a href="#code-blocks">Code blocks</a></li>
+                <li><a href="#horizontal-rules">Horizontal rules</a>
+                </li>
+            </ul>
+            </li>
+            <li><a href="#span-elements">Span Elements</a><ul>
+                <li><a href="#link-email">Link</a></li>
+                <li><a href="#programming-lanuage">Programming lanuage</a><ul>
+                </ul>
+                </li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+    </ul>
+</div>
+</p>
+
+<h2 id="markdown-transform"><strong>Markdown Transform</strong></h2>
+
+<blockquote>
+    <p>마크다운은 변형되어 사용되는 경우가 많다.  변형의 이유는 보통 기능의 추가, 혹은 더 편하게 사용하기 위함이다.  하지만 변형이 가능하다는 것은 동일한 문법이 tool에 따라 조금은 다르게 표시될 수 있다는 것을 의미한다.</p>
+</blockquote>
+
+<ul>
+    <li><p><a href="https://help.github.com/categories/writing-on-github/">Github-Flavored Markdown</a></p>
+
+        <ul><li>줄바꿈을 한번만 해도 강제개행을 할 수 있다.</li>
+            <li>do_this_and_do_that과 같은 형태의 단어를 기울임꼴 글자로 처리하지 않는다.</li>
+            <li>URL을 자동으로 링크로 변환해준다.</li>
+            <li>코드를 입력할 때 “` 로 감싸주는 문법이 추가되었다.</li>
+            <li>문법 강조가 적용이 된다. Linguist를 이용하여 처리한다.</li>
+            <li>작업 목록(Task lists) 문법이 추가되었다.</li>
+            <li>Git관련 링크를 자동으로 처리해준다. (SHA, 사용자, 이슈 등)</li></ul></li>
+    <li><p><a href="http://fletcherpenney.net/multimarkdown/">MultiMarkdown</a></p>
+
+        <ul><li>기존 마크다운에 없는 기능(주석, 표 등)이 추가되어있다.</li></ul></li>
+    <li><p><a href="http://pad.haroopress.com/page.html">Haroopad Flavored Markdown</a></p>
+
+        <ul><li>강조 문법이 추가되었다. 사용 방법은 == 강조 == 처럼 쓰면 된다. 어디서 본 것 같은데</li>
+            <li>목차 기능이 추가되었다. 사용 방법은 [TOC]처럼 쓰면 된다.</li>
+            <li>@<a href="http://www.youtube.com/watch?v=jo_B4LTHi3I"></a> 처럼 유튜브 영상 등을 추가할 수 있다.</li>
+            <li>다이어그램 기능이 추가되었다.</li></ul></li>
+</ul>
+
+<blockquote>
+    <p>개인적으로 stackedit이라는 web기반 editor을 사용하고 있는데 대다수 변형 마크다운을 지원한다.  그래서 위에서 사용하는 분법을 <del>모두? 거의 모두?</del> 사용 가능하다.</p>
+</blockquote>
+
+<h2 id="block-elements"><strong>Block Elements</strong></h2>
+
+
+
+<h3 id="headers"><strong>Headers</strong></h3>
+
+<blockquote>
+    <p>문맥의 head를 표시할때 사용.  실질적으로는 글자 크기만 변한다. <br>
+        H1 ~ H6 까지만 사용가능</p>
+</blockquote>
+
+
+
+<h4 id="basic-syntax"><strong>basic syntax</strong></h4>
+
+<pre><code># H1
+              ## H2
+              ### H3
+              #### H4
+              ##### H5
+              ###### H6
+            </code></pre>
+
+
+
+<h4 id="expanded-syntax"><strong>expanded syntax</strong></h4>
+
+<pre><code>1) #와 ===
+              "# H1 Title"은
+              "H1 title
+              ========" 와 같은 형태로도 사용 가능
+
+              2) ##와 ---
+              "## H2 Title" 은
+              "H2 Title
+              -------- " 와 같은 형태로도 사용 가능
+
+              3) ===와 ---의 숫자
+              "==="와 "---"은 3글자 이상이면 동일
+              예를 들어 "===" 와 "========"은 동일
+
+              4) optional end fix
+              "# titile #"와 같은 형태로도 사용 가능
+              예를 들어 "## titile"는 "## titile ##"과 동일
+            </code></pre>
+
+
+
+<h4 id="example"><strong>example</strong></h4>
+
+<blockquote>
+    <h1 id="h1-titile">H1 titile</h1>
+
+    <h2 id="h2-titile">H2 titile</h2>
+
+    <h3 id="h3-titile">H3 titile</h3>
+
+    <h4 id="h4-titile">H4 titile</h4>
+
+    <h5 id="h5-titile">H5 titile</h5>
+
+    <h6 id="h6-titile">H6 titile</h6>
+</blockquote>
+
+<hr>
+
+
+
+<h3 id="emphasis"><strong>Emphasis</strong></h3>
+
+<blockquote>
+    <p>markdown에서는 기울임, 두껍게, 가로선을 지원 <br>
+        중복으로 사용 가능</p>
+</blockquote>
+
+
+
+<h4 id="basic-syntax-1"><strong>basic syntax</strong></h4>
+
+<pre><code>*기울임*
+              **두껍게**
+              ~~가로선~~
+            </code></pre>
+
+
+
+<h4 id="expanded-syntax-1"><strong>expanded syntax</strong></h4>
+
+<pre><code>1) "*기울임*" 대신 "_기울임_"으로 사용 가능
+
+              2) "**두껍게**" 대신 "__두껍게__"으로 사용 가능
+
+              3) 중복으로 적용가능
+              "## ** titile ** ##"와 같은 형태로 header와 중복 가능
+              "* ** titile ** *"와 같은 형태로 emphasis끼리의 중복 가능
+            </code></pre>
+
+
+
+<h4 id="example-1"><strong>example</strong></h4>
+
+<blockquote>
+    <p><em>기울임</em> <br>
+        <strong>두껍게</strong> <br>
+        <del>가로선</del> <br>
+        <strong><em>두꺼운 기울임</em></strong></p>
+</blockquote>
+
+<hr>
+
+
+
+<h3 id="list"><strong>List</strong></h3>
+
+<blockquote>
+    <p>list는 numbered list와 bulleted list를 사용가능</p>
+</blockquote>
+
+
+
+<h4 id="basic-syntax-2"><strong>basic syntax</strong></h4>
+
+<pre><code>numbered list는 "1. list1"과 같은 형태로 사용
+                bulleted list는 "* item"과 같은 형태로 사용
+              </code></pre>
+
+
+
+<h4 id="expanded-syntax-2"><strong>expanded syntax</strong></h4>
+
+<pre><code>1) numbered list는 자동정렬 되며, 번호는 무조건 1부터 순차적으로 표시
+                다음은 모두 동일하게 출력됨
+                ----------------------------------------------------------
+                1) item01
+                2) item02
+                3) item03
+                ----------------------------------------------------------
+                (번호가 바뀌어도)
+                1) item01
+                3) item03
+                2) item02
+                ----------------------------------------------------------
+                (번호가 똑같아도)
+                1) item01
+                1) item02
+                1) item03
+                ----------------------------------------------------------
+                (번호가 순차적이 아니더라도)
+                1) item01
+                4) item02
+                8) item03
+
+                2) bulleted list는 "+", "-"로 대체가능
+
+                3) list in list도 가능하며 문자앞 공백을 통해서 depth를 컨트롤 가능
+              </code></pre>
+
+
+
+<h4 id="example-2"><strong>example</strong></h4>
+
+<blockquote>
+    <h5 id="numbered-list"><strong>numbered list</strong></h5>
+
+    <ol>
+        <li>first item</li>
+        <li>second item</li>
+    </ol>
+
+    <h5 id="bulleted-list"><strong>bulleted list</strong></h5>
+
+    <ul>
+        <li>item01 <br>
+            <ol><li>depth01</li></ol></li>
+        <li>item02 <br>
+            <ol><li>depth01 <br>
+                <ul><li>child of child01</li>
+                    <li>child of child02</li></ul></li>
+                <li>depth01</li></ol></li>
+        <li>item03</li>
+    </ul>
+</blockquote>
+
+<hr>
+
+
+
+<h3 id="code-blocks"><strong>Code blocks</strong></h3>
+
+<blockquote>
+    <p>code block은 타이핑한 문자 그대로 보여짐</p>
+</blockquote>
+
+
+
+<h4 id="basic-syntax-3"><strong>basic syntax</strong></h4>
+
+<pre><code>[tab]이나 4 spaces 이상을 입력
+                      </code></pre>
+
+
+
+<h4 id="example-3"><strong>example</strong></h4>
+
+<pre><code>### head 라고 입력해도 그대로 보여지고,
+                        **bold** 라고 입력해도 그대로 보여진다.
+                        1) item01 이라고 입력해도 리스트로 보여지지 않는다.
+                      </code></pre>
+
+<hr>
+
+
+
+<h3 id="horizontal-rules"><strong>Horizontal rules</strong></h3>
+
+<blockquote>
+    <p>수평선을 표시</p>
+</blockquote>
+
+
+
+<h4 id="basic-syntax-4"><strong>basic syntax</strong></h4>
+
+<pre><code>* * *
+                        ***
+                        ******
+                        - - - - - - - - - - - -
+                        ------------------------------
+                      </code></pre>
+
+
+
+<h4 id="example-4"><strong>example</strong></h4>
+
+<blockquote>
+    <p></p><hr><p></p>
+</blockquote>
+
+<hr>
+
+
+
+<h2 id="span-elements"><strong>Span Elements</strong></h2>
+
+
+
+<h3 id="link-email"><strong>Link &amp; Email</strong></h3>
+
+<blockquote>
+    <p>다른 위치로 link를 걸때 사용 <br>
+        <strong><em>inline link</em></strong>와 <strong><em>reference link</em></strong>를 지원</p>
+</blockquote>
+
+
+
+<h4 id="basic-syntax-5"><strong>basic syntax</strong></h4>
+
+<pre><code>inline link : [link name](link-address "Title")
+                          reference link : [link name](/page/ref/path), Title은 option
+                          email link : &lt;email@address.com&gt;
+                        </code></pre>
+
+
+
+<h4 id="expanded-syntax-3"><strong>expanded syntax</strong></h4>
+
+<pre><code>1) inline link에서
+                          - "title"은 optional 값
+                          -
+                          2) reference link에서
+                          - [link name][id]와 같은 형태로 사용 가능
+                          - id는 문서 어디서라도 [id]: http://anywhere.com/ "Optional title hre"와 같이 표시
+                          - id는 대소문자 구분 없음 [id]와 [ID]는 동일
+                        </code></pre>
+
+
+
+<h4 id="example-5"><strong>example</strong></h4>
+
+<blockquote>
+    <p><a href="http://google.com">google</a> <br>
+        <a href="">google</a> <br>
+        <a href="mailto:email@gmail.com">email@gmail.com</a></p>
+</blockquote>
+
+<hr>
+
+<h3 id="programming-lanuage"><strong>Programming lanuage</strong></h3>
+
+<blockquote>
+    <p>Programming Lanuage를 표시하기 위해 사용</p>
+</blockquote>
+
+
+
+<h4 id="basic-syntax-6"><strong>basic syntax</strong></h4>
+
+<pre><code>``` language name
+                            &lt;some code&gt;
+                            ```
+                          </code></pre>
+
+
+
+<h4 id="example-6"><strong>example</strong></h4>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs ">class Clz{
+                            <span class="hljs-keyword">private</span> String hello = <span class="hljs-string">"hello"</span>;
+
+                            <span class="hljs-keyword">void</span> say(){
+                            System.out.println(<span class="hljs-string">"say "</span> + <span class="hljs-keyword">this</span>.hello);
+                          }
+                        }</code></pre>
